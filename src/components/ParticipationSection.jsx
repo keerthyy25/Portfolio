@@ -71,7 +71,7 @@ export const ParticipationSection = () => {
   }, []);
 
   return (
-    <section id="participation" className="py-24 px-4 relative z-10 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a2e] to-[#16213e] overflow-hidden">
+    <section id="participation" className="py-16 px-2 sm:px-4 relative z-10 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a2e] to-[#16213e] overflow-hidden">
       {/* Layered Background Gradients */}
       <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-purple-900/40 to-black/50" />
       <div className="absolute inset-0 bg-gradient-to-bl from-black/50 via-purple-800/30 to-black/60" />
@@ -209,7 +209,7 @@ export const ParticipationSection = () => {
         ))}
       </div>
       
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10 px-0 sm:px-2 md:px-4">
         <motion.h2 
           className="text-4xl font-extrabold mb-6 text-center text-white"
           initial={{ opacity: 0, y: -30 }}

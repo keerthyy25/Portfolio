@@ -11,7 +11,7 @@ import { ParticipationSection } from "../components/ParticipationSection";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden px-0 sm:px-2 md:px-4">
       {/* Background Effects */}
       <StarBackground />
 

@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="theme">
+    <ThemeProvider defaultTheme="dark" storageKey="theme">
       <Toaster />
       <BrowserRouter>
         <Routes>

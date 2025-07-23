@@ -74,7 +74,7 @@ const Navbar = () => {
         ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-gray-700/20' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 lg:px-6">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2 group cursor-pointer" onClick={() => scrollToSection('home')}>
@@ -90,7 +90,7 @@ const Navbar = () => {
                 <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-blue-400 rounded-full"></div>
               </div>
             </div>
-            <span className="font-bold text-xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+            <span className="font-bold text-lg sm:text-xl bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
               style={{ WebkitBackgroundClip: "text", backgroundClip: "text" }}>
               Keerthi
             </span>
@@ -102,7 +102,7 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-2 rounded-full font-medium transition-all duration-300 relative group ${
+                className={`px-2 sm:px-4 py-2 rounded-full font-medium transition-all duration-300 relative group ${
                   isActiveSection(item.id)
                     ? 'text-purple-600 dark:text-purple-400'
                     : 'text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400'
@@ -119,7 +119,7 @@ const Navbar = () => {
             ))}
 
             {/* Animated Icon Feature */}
-            <div className="ml-4 group relative">
+            <div className="ml-2 sm:ml-4 group relative">
               <div className={`p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 transition-all duration-500 transform hover:scale-110 hover:rotate-12 cursor-pointer ${
                 pulseEffect ? 'animate-bounce' : ''
               }`}>
@@ -150,7 +150,8 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -158,25 +159,25 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="py-4 space-y-2">
             {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  isActiveSection(item.id)
-                    ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
-                }`}
-              >
-                {item.name}
-              </button>
+            <button
+              key={item.name}
+              onClick={() => scrollToSection(item.id)}
+              className={`block w-full text-left px-3 py-3 rounded-lg font-medium transition-all duration-300 ${
+                isActiveSection(item.id)
+                  ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
+              }`}
+            >
+              {item.name}
+            </button>
             ))}
             
             {/* Mobile Animated Feature */}
-            <div className="mt-6 flex justify-center">
+            <div className="mt-4 flex justify-center">
               <div className="group relative">
                 <div className="p-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 transition-all duration-500 transform hover:scale-110 cursor-pointer">
                   {React.createElement(icons[animatedIcon], {

@@ -23,7 +23,7 @@ export const ThemeToggle = () => {
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
     return (
-      <div className="fixed max-sm:hidden top-5 right-5 z-50 p-3 rounded-full bg-white/80 dark:bg-gray-900/80 border border-gray-200 dark:border-gray-700 shadow-lg">
+      <div className="fixed top-3 right-3 sm:top-5 sm:right-5 z-50 p-2 sm:p-3 rounded-full bg-white/80 dark:bg-gray-900/80 border border-gray-200 dark:border-gray-700 shadow-lg">
         <div className="h-6 w-6" />
       </div>
     );
@@ -33,7 +33,7 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-3 rounded-full transition-all duration-300",
+        "fixed top-3 right-3 sm:top-5 sm:right-5 z-50 p-2 sm:p-3 rounded-full transition-all duration-300",
         "focus:outline-none focus:ring-2 focus:ring-primary/50",
         "bg-white/80 dark:bg-gray-900/80 hover:bg-white dark:hover:bg-gray-800",
         "border border-gray-200 dark:border-gray-700 shadow-lg backdrop-blur-sm",

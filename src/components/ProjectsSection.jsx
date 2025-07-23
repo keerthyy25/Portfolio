@@ -37,8 +37,8 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative z-10">
-      <div className="container mx-auto max-w-6xl">
+    <section id="projects" className="py-16 px-2 sm:px-4 relative z-10 overflow-hidden">
+      <div className="container mx-auto max-w-6xl relative z-10 px-0 sm:px-2 md:px-4">
         {/* Heading */}
         <motion.h2
           className="text-center text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-br from-purple-400 via-pink-500 to-indigo-400 bg-clip-text text-transparent tracking-wide"

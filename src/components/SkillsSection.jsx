@@ -108,7 +108,7 @@ export const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-24 px-4 relative z-10 overflow-hidden">
+    <section id="skills" className="py-16 px-2 sm:px-4 relative z-10 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/10 to-indigo-900/20"></div>
       
@@ -141,7 +141,7 @@ export const SkillsSection = () => {
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-pink-500/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-500/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
 
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10 px-0 sm:px-2 md:px-4">
         {/* Title with stunning effects */}
         <motion.div
           className="text-center mb-16 relative"
