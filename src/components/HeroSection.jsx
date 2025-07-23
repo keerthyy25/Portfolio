@@ -9,7 +9,7 @@ export const HeroSection = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const words = ["Keerthika", "Karthikeyan", "AI/ML Engineer", "Full-Stack Dev", "Innovator"];
+  const words = ["AI/ML Engineer", "Full-Stack Dev", "Innovator"];
   const typingSpeed = 150;
   const deletingSpeed = 100;
   const pauseDuration = 2000;
@@ -152,67 +152,46 @@ export const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 blur-3xl opacity-30 animate-pulse"></div>
                 
                 {/* Main name with multiple effects */}
-                <motion.span 
-                  className="relative block"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, delay: 0.5 }}
-                >
-                  {/* First name with special styling */}
-                  <span className="relative inline-block mr-4">
-                    <span 
-                      className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent font-black"
-                      style={{ WebkitBackgroundClip: "text", backgroundClip: "text" }}
-                    >
-                      Keerthika
-                    </span>
-                    {/* Underline animation */}
-                    <motion.div
-                      className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: "100%" }}
-                      transition={{ duration: 1, delay: 1.5 }}
-                    />
+              <motion.span 
+                className="relative block"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
+                <span className="relative inline-block">
+                  <span 
+                    className="bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent font-black"
+                    style={{ WebkitBackgroundClip: "text", backgroundClip: "text" }}
+                  >
+                    Hello!
                   </span>
-                  
-                  {/* Last name with different effect */}
-                  <span className="relative inline-block">
-                    <span 
-                      className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent font-black"
-                      style={{ WebkitBackgroundClip: "text", backgroundClip: "text" }}
-                    >
-                      Karthikeyan
-                    </span>
-                    {/* Floating dots around the name */}
-                    <motion.div
-                      className="absolute -top-2 -right-2 w-3 h-3 bg-yellow-400 rounded-full"
-                      animate={{ 
-                        scale: [1, 1.5, 1], 
-                        rotate: [0, 360],
-                        opacity: [0.5, 1, 0.5]
-                      }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                    <motion.div
-                      className="absolute -bottom-2 -left-2 w-2 h-2 bg-pink-400 rounded-full"
-                      animate={{ 
-                        scale: [1, 1.3, 1], 
-                        rotate: [360, 0],
-                        opacity: [0.7, 1, 0.7]
-                      }}
-                      transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
-                    />
-                  </span>
-                </motion.span>
-                
-                {/* Typing effect subtitle */}
+                  {/* Floating dots around the text */}
+                  <motion.div
+                    className="absolute -top-2 -right-2 w-3 h-3 bg-yellow-400 rounded-full"
+                    animate={{ 
+                      scale: [1, 1.5, 1], 
+                      rotate: [0, 360],
+                      opacity: [0.5, 1, 0.5]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  />
+                  <motion.div
+                    className="absolute -bottom-2 -left-2 w-2 h-2 bg-pink-400 rounded-full"
+                    animate={{ 
+                      scale: [1, 1.3, 1], 
+                      rotate: [360, 0],
+                      opacity: [0.7, 1, 0.7]
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
+                  />
+                </span>
+              </motion.span>                {/* Typing effect subtitle */}
                 <motion.div 
-                  className="mt-4 text-2xl md:text-3xl font-medium"
+                  className="mt-4 text-3xl md:text-4xl font-medium"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 2 }}
                 >
-                  <span className="text-gray-300">I'm a </span>
                   <span 
                     className="bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent font-bold"
                     style={{ WebkitBackgroundClip: "text", backgroundClip: "text" }}
